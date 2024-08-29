@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async practice</title>
+</head>
+<body>
+
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="end">End</button>
+
+  
+    
+</body>
+<script>
+const start =document.querySelector("#start")
+const end =document.querySelector("#end")
+
+let intervlId;
+
+
+const sayDate= function(str){
+
+    console.log(str,Date.now())
+}
+
+start.addEventListener("click",function(){
+    intervlId= setInterval(sayDate,1000,"Hello")
+
+})
+
+end.addEventListener("click",function(){
+
+    clearInterval(intervlId)
+})
+
+
+</script>
+</html>
